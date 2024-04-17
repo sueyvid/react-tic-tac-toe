@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import * as React from 'react';
+import Button from '@mui/material/Button';
 
 export default function Board() {
   const [xIsNext, setXIsNext] = useState(true);
@@ -40,7 +42,7 @@ export default function Board() {
       <Square value={squares[7]} onSquareClick={() => handleClick(7)}/>
       <Square value={squares[8]} onSquareClick={() => handleClick(8)}/>
     </div>
-    <button onClick={reset}>Resetar o jogo</button>
+    <Button variant="contained" onClick={reset}>Resetar o jogo</Button>
     </>
   )
 
